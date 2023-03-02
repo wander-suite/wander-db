@@ -1,0 +1,8 @@
+FROM postgres
+
+ENV POSTGRES_DB=$DBUSER
+ENV POSTGRES_PASSWORD=$DBPASS
+ENV POSTGRES_USER=$DBNAME
+
+COPY ./postgres/ /docker-entrypoint-initdb.d/
+EXPOSE 5432
