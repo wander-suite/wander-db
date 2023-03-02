@@ -10,4 +10,3 @@ on:
 jobs:
   call-db-workflow:
     uses: wander-suite/wander-devops/.github/workflows/db-workflow.yml@main
-    secrets: inherit
