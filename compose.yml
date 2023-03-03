@@ -1,7 +1,7 @@
 version: "3"
 services:
-  prod:
-    image: wander_suite/db:latest
+  test:
+    image: wander_suite/db:test
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,6 +11,6 @@ services:
       - POSTGRES_PASSWORD="NotAValidPassword"
     ports:
       - "5432:5432"
-    container_name: wander-db-prod
+    container_name: wander-db-test
     volumes:
       - ./postgres/:/docker-entrypoint-initdb.d/
